@@ -7,7 +7,6 @@ const NAV = [
   { label: 'Personas', href: '#productos' },
   { label: 'Cuentas', href: '#productos' },
   { label: 'Créditos', href: '#productos' },
-  { label: '¿Eres apto?', href: '/precalificador' },
   { label: 'Beneficios', href: '#beneficios' },
   { label: 'Ayuda', href: '#footer' },
 ]

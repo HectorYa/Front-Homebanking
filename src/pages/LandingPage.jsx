@@ -55,7 +55,6 @@ export default function LandingPage() {
       {/* ===== ACCESOS RÁPIDOS ===== */}
       <section className="lp-quickbar">
         <button className="lp-quick" onClick={() => navigate('/login')}><Wallet size={20} /> Abrir cuenta</button>
-        <button className="lp-quick" onClick={() => navigate('/precalificador')}><UserCheck size={20} /> ¿Eres apto?</button>
         <button className="lp-quick" onClick={() => navigate('/login')}><BadgePercent size={20} /> Solicitar crédito</button>
         <button className="lp-quick" onClick={() => navigate('/tarifarios')}><FileText size={20} /> Tasas y tarifas</button>
       </section>
@@ -93,7 +92,7 @@ export default function LandingPage() {
             <h2>¿Eres apto para un crédito?</h2>
             <p>Averígualo en segundos. Ingresa tu DNI y te decimos si cumples con los requisitos básicos para solicitar un préstamo. Sin costo ni compromiso.</p>
           </div>
-          <button className="lp-btn lp-btn-light" onClick={() => navigate('/precalificador')}>
+          <button className="lp-btn lp-btn-light" onClick={() => navigate('/login')}>
             Consultar ahora <ArrowRight size={18} />
           </button>
         </div>
