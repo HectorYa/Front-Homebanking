@@ -45,7 +45,7 @@ export default function Header() {
               <circle cx="24" cy="24" r="7" fill="var(--brand-yellow)" />
               <circle cx="24" cy="24" r="3.4" fill="var(--brand-red)" />
             </svg>
-            <span className="be-brand-name">Banco Energía</span>
+            <span className="be-brand-name">Financiera Surgir</span>
           </button>
 
           <nav className="be-nav">

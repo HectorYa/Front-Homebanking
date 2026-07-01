@@ -40,7 +40,7 @@ export default function HomePage() {
         {/* Saludo */}
         <div className="be-greeting">
           <h1>Hola {primerNombre(user?.nombre)}, hoy te ofrecemos:</h1>
-          <p>Esta es la posición global de tus productos en Banco Energía.</p>
+          <p>Esta es la posición global de tus productos en Financiera Surgir.</p>
         </div>
 
         {/* KPI Cards */}

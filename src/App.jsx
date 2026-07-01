@@ -15,7 +15,7 @@ import PagoCreditoPage from './pages/PagoCreditoPage.jsx'
 import PagoServiciosPage from './pages/PagoServiciosPage.jsx'
 import SolicitarCreditoPage from './pages/SolicitarCreditoPage.jsx'
 
-// Layout para las rutas autenticadas: cabecera Banco Energía + contenido.
+// Layout para las rutas autenticadas: cabecera Financiera Surgir + contenido.
 function PrivateLayout({ children }) {
   return (
     <PrivateRoute>

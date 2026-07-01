@@ -103,7 +103,7 @@ export default function LoginPage() {
                 <circle cx="24" cy="24" r="3.4" fill="#e2132b" />
               </svg>
               <div className="login-card-brand">
-                <span className="login-card-name">Banco Energía</span>
+                <span className="login-card-name">Financiera Surgir</span>
               </div>
             </div>
           </div>
