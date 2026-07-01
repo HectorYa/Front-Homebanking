@@ -4,6 +4,9 @@ import Header from './components/layout/Header.jsx'
 
 import LandingPage from './pages/LandingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import SimuladorPage from './pages/SimuladorPage.jsx'
+import PreCalificadorPage from './pages/PreCalificadorPage.jsx'
+import TarifariosPage from './pages/TarifariosPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import CuentasAhorroPage from './pages/CuentasAhorroPage.jsx'
 import MovimientosPage from './pages/MovimientosPage.jsx'
@@ -14,6 +17,7 @@ import TransferenciaPage from './pages/TransferenciaPage.jsx'
 import PagoCreditoPage from './pages/PagoCreditoPage.jsx'
 import PagoServiciosPage from './pages/PagoServiciosPage.jsx'
 import SolicitarCreditoPage from './pages/SolicitarCreditoPage.jsx'
+import ReclamosPage from './pages/ReclamosPage.jsx'
 
 // Layout para las rutas autenticadas: cabecera Financiera Surgir + contenido.
 function PrivateLayout({ children }) {
@@ -33,6 +37,9 @@ export default function App() {
       {/* Públicas */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/simulador" element={<SimuladorPage />} />
+      <Route path="/precalificador" element={<PreCalificadorPage />} />
+      <Route path="/tarifarios" element={<TarifariosPage />} />
 
       {/* Privadas */}
       <Route path="/inicio" element={<PrivateLayout><HomePage /></PrivateLayout>} />
@@ -47,6 +54,7 @@ export default function App() {
       <Route path="/operaciones/pago-credito/:cod" element={<PrivateLayout><PagoCreditoPage /></PrivateLayout>} />
       <Route path="/operaciones/pago-servicios" element={<PrivateLayout><PagoServiciosPage /></PrivateLayout>} />
       <Route path="/creditos/solicitar" element={<PrivateLayout><SolicitarCreditoPage /></PrivateLayout>} />
+      <Route path="/reclamos" element={<PrivateLayout><ReclamosPage /></PrivateLayout>} />
 
       <Route path="*" element={<Navigate to="/inicio" replace />} />
     </Routes>

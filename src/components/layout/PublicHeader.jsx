@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { Lock, Menu } from 'lucide-react'
+import { Calculator, Lock, Menu } from 'lucide-react'
 import Logo from '../ui/Logo.jsx'
 
 // Cabecera del sitio público (home marketero). CTA destacado: Banca por Internet.
@@ -7,6 +7,8 @@ const NAV = [
   { label: 'Personas', href: '#productos' },
   { label: 'Cuentas', href: '#productos' },
   { label: 'Créditos', href: '#productos' },
+  { label: '¿Eres apto?', href: '/precalificador' },
+  { label: 'Simulador', href: '/simulador' },
   { label: 'Beneficios', href: '#beneficios' },
   { label: 'Ayuda', href: '#footer' },
 ]
@@ -22,9 +24,14 @@ export default function PublicHeader() {
         </button>
 
         <nav className="lp-nav-links">
-          {NAV.map((n) => (
-            <a key={n.label} href={n.href}>{n.label}</a>
-          ))}
+          {NAV.map((n) => {
+            const isRoute = n.href.startsWith('/')
+            return isRoute ? (
+              <a key={n.label} href={n.href} onClick={(e) => { e.preventDefault(); navigate(n.href) }} style={{ cursor: 'pointer' }}>{n.label}</a>
+            ) : (
+              <a key={n.label} href={n.href}>{n.label}</a>
+            )
+          })}
         </nav>
 
         <div className="lp-nav-actions">

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import {
   CreditCard, Wallet, PiggyBank, Send, Smartphone, ShieldCheck,
-  TrendingUp, Clock, MapPin, ArrowRight, Lock, BadgePercent, Briefcase,
+  TrendingUp, Clock, MapPin, ArrowRight, Lock, BadgePercent, Briefcase, Calculator, FileText, UserCheck,
 } from 'lucide-react'
 import PublicHeader from '../components/layout/PublicHeader.jsx'
 import PublicFooter from '../components/layout/PublicFooter.jsx'
@@ -55,9 +55,10 @@ export default function LandingPage() {
       {/* ===== ACCESOS RÁPIDOS ===== */}
       <section className="lp-quickbar">
         <button className="lp-quick" onClick={() => navigate('/login')}><Wallet size={20} /> Abrir cuenta</button>
+        <button className="lp-quick" onClick={() => navigate('/precalificador')}><UserCheck size={20} /> ¿Eres apto?</button>
+        <button className="lp-quick" onClick={() => navigate('/simulador')}><Calculator size={20} /> Simular cuota</button>
         <button className="lp-quick" onClick={() => navigate('/login')}><BadgePercent size={20} /> Solicitar crédito</button>
-        <button className="lp-quick" onClick={() => navigate('/login')}><Send size={20} /> Transferir</button>
-        <button className="lp-quick" onClick={() => navigate('/login')}><CreditCard size={20} /> Pagar cuota</button>
+        <button className="lp-quick" onClick={() => navigate('/tarifarios')}><FileText size={20} /> Tasas y tarifas</button>
       </section>
 
       {/* ===== PRODUCTOS ===== */}
@@ -82,6 +83,20 @@ export default function LandingPage() {
               </article>
             )
           })}
+        </div>
+      </section>
+
+      {/* ===== PRE-CALIFICADOR ===== */}
+      <section className="lp-promo" style={{ background: 'linear-gradient(135deg, #1e1722, #2d1f36)' }}>
+        <div className="lp-promo-inner">
+          <div>
+            <span className="lp-promo-tag"><UserCheck size={15} /> Saber si eres apto</span>
+            <h2>¿Eres apto para un crédito?</h2>
+            <p>Averígualo en segundos. Ingresa tu DNI y te decimos si cumples con los requisitos básicos para solicitar un préstamo. Sin costo ni compromiso.</p>
+          </div>
+          <button className="lp-btn lp-btn-light" onClick={() => navigate('/precalificador')}>
+            Consultar ahora <ArrowRight size={18} />
+          </button>
         </div>
       </section>
 

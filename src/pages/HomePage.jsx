@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Wallet, CreditCard, Send, Receipt, FileText, FilePlus2,
   PiggyBank, ChevronRight, TrendingDown, TrendingUp,
-  ArrowUpRight, ArrowDownRight, MessageCircle,
+  ArrowUpRight, ArrowDownRight, MessageCircle, HelpCircle,
 } from 'lucide-react'
 import { useHBAuth } from '../hooks/useHBAuth.js'
 import { useCuentas } from '../hooks/useCuentas.js'
@@ -32,6 +32,7 @@ export default function HomePage() {
     { icon: Receipt, label: 'Pago de crédito', to: '/operaciones/pago-credito', color: '#f7941e' },
     { icon: FileText, label: 'Pago de servicios', to: '/operaciones/pago-servicios', color: '#00a9a5' },
     { icon: FilePlus2, label: 'Solicitar préstamo', to: '/creditos/solicitar', color: '#8e24aa' },
+    { icon: HelpCircle, label: 'Mis Reclamos', to: '/reclamos', color: '#00a9a5' },
   ]
 
   return (

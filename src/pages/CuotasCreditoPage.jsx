@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { ArrowLeft, CalendarDays, Receipt, RefreshCw } from 'lucide-react'
+import { ArrowLeft, CalendarDays, Receipt, RefreshCw, Printer } from 'lucide-react'
 import { useCuotas } from '../hooks/useCreditos.js'
 import { formatDate } from '../utils/format.js'
 import PageLayout from '../components/layout/PageLayout.jsx'
@@ -39,6 +39,7 @@ export default function CuotasCreditoPage() {
         </div>
         <div className="bbva-page-actions">
           <button className="bbva-btn-ghost" onClick={recargar} disabled={loading}><RefreshCw size={14} /> Actualizar</button>
+          <button className="bbva-btn-ghost" onClick={() => window.print()}><Printer size={14} /> Descargar PDF</button>
           <button className="bbva-btn" onClick={() => navigate(`/operaciones/pago-credito/${cod}`)} disabled={!proxima}>
             <Receipt size={14} /> Pagar próxima cuota
           </button>

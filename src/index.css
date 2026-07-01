@@ -2878,3 +2878,15 @@ button {
 [data-theme="dark"] .login-back:hover {
   color: var(--brand-red);
 }
+
+/* ====== Print Styles (PDF export) ====== */
+@media print {
+  body { background: #fff; color: #000; }
+  .hb-header, .lp-header, .lp-footer, .hb-back, .bbva-page-actions,
+  .be-sidebar, .be-dashboard-main .be-section, .be-dashboard > aside,
+  .bbva-btn, .bbva-btn-ghost { display: none !important; }
+  .bbva-page, .bbva-page-main, .hb-card { box-shadow: none; border: none; margin: 0; padding: 0; }
+  .hb-table th { background: #f5f5f5 !important; color: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .hb-table td, .hb-table th { border-color: #ccc; }
+  @page { margin: 15mm; }
+}

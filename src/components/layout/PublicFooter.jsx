@@ -1,22 +1,41 @@
+import { useNavigate } from 'react-router-dom'
 import { Facebook, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react'
 import Logo from '../ui/Logo.jsx'
 
 const COLS = [
   {
     title: 'Productos',
-    links: ['Cuenta de Ahorros', 'Cuenta Sueldo', 'Crédito de Consumo', 'Crédito Microempresa', 'Tarjeta de Débito'],
+    links: [
+      { label: 'Cuenta de Ahorros', to: '/login' },
+      { label: 'Cuenta Sueldo', to: '/login' },
+      { label: 'Crédito de Consumo', to: '/login' },
+      { label: 'Crédito Microempresa', to: '/login' },
+      { label: 'Tarjeta de Débito', to: '/login' },
+    ],
   },
   {
     title: 'Banco Andino',
-    links: ['Nosotros', 'Trabaja con nosotros', 'Memoria anual', 'Sostenibilidad', 'Sala de prensa'],
+    links: [
+      { label: 'Nosotros', to: '/' },
+      { label: 'Simulador de Crédito', to: '/simulador' },
+      { label: 'Tasas y tarifas', to: '/tarifarios' },
+      { label: 'Transparencia', to: '/tarifarios' },
+      { label: 'Sala de prensa', to: '/' },
+    ],
   },
   {
     title: 'Ayuda',
-    links: ['Centro de ayuda', 'Ubícanos', 'Reclamos', 'Transparencia', 'Tasas y tarifas'],
+    links: [
+      { label: 'Centro de ayuda', to: '/' },
+      { label: 'Ubícanos', to: '/' },
+      { label: 'Reclamos', to: '/reclamos' },
+      { label: 'Libro de reclamaciones', to: '/reclamos' },
+    ],
   },
 ]
 
 export default function PublicFooter() {
+  const navigate = useNavigate()
   return (
     <footer className="lp-footer" id="footer">
       <div className="lp-footer-inner">
@@ -35,7 +54,13 @@ export default function PublicFooter() {
             <h4>{c.title}</h4>
             <ul>
               {c.links.map((l) => (
-                <li key={l}><a href="#footer">{l}</a></li>
+                <li key={l.label}>
+                  <a href={l.to.startsWith('/') ? undefined : l.to}
+                     onClick={l.to.startsWith('/') ? (e) => { e.preventDefault(); navigate(l.to) } : undefined}
+                     style={{ cursor: 'pointer' }}>
+                    {l.label}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -53,7 +78,7 @@ export default function PublicFooter() {
 
       <div className="hb-franja-top" />
       <div className="lp-footer-legal">
-        © {2026} Banco Andino — Banca por Internet. Demo educativo. Supervisado por la SBS.
+        &copy; {2026} Banco Andino — Banca por Internet. Demo educativo. Supervisado por la SBS.
       </div>
     </footer>
   )
