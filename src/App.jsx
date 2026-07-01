@@ -4,7 +4,6 @@ import Header from './components/layout/Header.jsx'
 
 import LandingPage from './pages/LandingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
-import SimuladorPage from './pages/SimuladorPage.jsx'
 import PreCalificadorPage from './pages/PreCalificadorPage.jsx'
 import TarifariosPage from './pages/TarifariosPage.jsx'
 import HomePage from './pages/HomePage.jsx'
@@ -37,7 +36,6 @@ export default function App() {
       {/* Públicas */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/simulador" element={<SimuladorPage />} />
       <Route path="/precalificador" element={<PreCalificadorPage />} />
       <Route path="/tarifarios" element={<TarifariosPage />} />
 

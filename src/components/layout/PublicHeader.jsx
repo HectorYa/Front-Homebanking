@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { Calculator, Lock, Menu } from 'lucide-react'
+import { Lock, Menu } from 'lucide-react'
 import Logo from '../ui/Logo.jsx'
 
 // Cabecera del sitio público (home marketero). CTA destacado: Banca por Internet.
@@ -8,7 +8,6 @@ const NAV = [
   { label: 'Cuentas', href: '#productos' },
   { label: 'Créditos', href: '#productos' },
   { label: '¿Eres apto?', href: '/precalificador' },
-  { label: 'Simulador', href: '/simulador' },
   { label: 'Beneficios', href: '#beneficios' },
   { label: 'Ayuda', href: '#footer' },
 ]

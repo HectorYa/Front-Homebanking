@@ -17,7 +17,6 @@ const COLS = [
     title: 'Banco Andino',
     links: [
       { label: 'Nosotros', to: '/' },
-      { label: 'Simulador de Crédito', to: '/simulador' },
       { label: 'Tasas y tarifas', to: '/tarifarios' },
       { label: 'Transparencia', to: '/tarifarios' },
       { label: 'Sala de prensa', to: '/' },

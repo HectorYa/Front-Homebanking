@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import {
   CreditCard, Wallet, PiggyBank, Send, Smartphone, ShieldCheck,
-  TrendingUp, Clock, MapPin, ArrowRight, Lock, BadgePercent, Briefcase, Calculator, FileText, UserCheck,
+  TrendingUp, Clock, MapPin, ArrowRight, Lock, BadgePercent, Briefcase, FileText, UserCheck,
 } from 'lucide-react'
 import PublicHeader from '../components/layout/PublicHeader.jsx'
 import PublicFooter from '../components/layout/PublicFooter.jsx'
@@ -56,7 +56,6 @@ export default function LandingPage() {
       <section className="lp-quickbar">
         <button className="lp-quick" onClick={() => navigate('/login')}><Wallet size={20} /> Abrir cuenta</button>
         <button className="lp-quick" onClick={() => navigate('/precalificador')}><UserCheck size={20} /> ¿Eres apto?</button>
-        <button className="lp-quick" onClick={() => navigate('/simulador')}><Calculator size={20} /> Simular cuota</button>
         <button className="lp-quick" onClick={() => navigate('/login')}><BadgePercent size={20} /> Solicitar crédito</button>
         <button className="lp-quick" onClick={() => navigate('/tarifarios')}><FileText size={20} /> Tasas y tarifas</button>
       </section>
